@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="5" vgap="5" fx:controller="br.com.softblue.java.calculadora.Controller">
+	<padding>
+		<Insets top="5" left="5" bottom="5" right="5" />
+	</padding>
+	
+	<StackPane GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="5" alignment="CENTER_LEFT"> 
+		<Label fx:id="lblResult" prefWidth="220" prefHeight="40" alignment="CENTER_RIGHT" />
+		<Label fx:id="lblError" text="E">
+			<StackPane.margin>
+				<Insets left="5" />
+			</StackPane.margin>
+		</Label>
+	</StackPane>
+	
+	<Button text="7" prefWidth="40" prefHeight="40" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#onNumber" />
+	<Button text="8" prefWidth="40" prefHeight="40" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#onNumber" />
+	<Button text="9" prefWidth="40" prefHeight="40" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#onNumber" />
+	<Button text="/" styleClass="opButton" prefWidth="40" prefHeight="40" GridPane.rowIndex="1" GridPane.columnIndex="3" onAction="#onOperation" />
+	<Button text="C" styleClass="opButton" prefWidth="40" prefHeight="85" GridPane.rowIndex="1" GridPane.columnIndex="4" GridPane.rowSpan="2" onAction="#onClear"/>
+	
+	<Button text="4" prefWidth="40" prefHeight="40" GridPane.rowIndex="2" GridPane.columnIndex="0" onAction="#onNumber" />
+	<Button text="5" prefWidth="40" prefHeight="40" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#onNumber" />
+	<Button text="6" prefWidth="40" prefHeight="40" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#onNumber" />
+	<Button text="*" styleClass="opButton" prefWidth="40" prefHeight="40" GridPane.rowIndex="2" GridPane.columnIndex="3" onAction="#onOperation" />
+	
+	<Button text="1" prefWidth="40" prefHeight="40" GridPane.rowIndex="3" GridPane.columnIndex="0" onAction="#onNumber" />
+	<Button text="2" prefWidth="40" prefHeight="40" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#onNumber" />
+	<Button text="3" prefWidth="40" prefHeight="40" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#onNumber" />
+	<Button text="-" styleClass="opButton" prefWidth="40" prefHeight="40" GridPane.rowIndex="3" GridPane.columnIndex="3" onAction="#onOperation" />
+	<Button text="=" styleClass="opButton" prefWidth="40" prefHeight="85" GridPane.rowIndex="3" GridPane.columnIndex="4" GridPane.rowSpan="2" onAction="#onOperation" />
+	
+	<Button text="0" prefWidth="85" prefHeight="40" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2" onAction="#onNumber" />
+	<Button text="," styleClass="opButton" prefWidth="40" prefHeight="40" GridPane.rowIndex="4" GridPane.columnIndex="2" onAction="#onComma" />
+	<Button text="+" styleClass="opButton" prefWidth="40" prefHeight="40" GridPane.rowIndex="4" GridPane.columnIndex="3" onAction="#onOperation" />
+</GridPane>
+

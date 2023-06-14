@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import br.com.softblue.bluekeeper.util.LimitedTextField?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.softblue.bluekeeper.controller.Controller">
+	<top>
+		<MenuBar>
+			<Menu text="_Arquivo">
+				<MenuItem text="_Sair" onAction="#exit" />
+			</Menu>
+		</MenuBar>
+	</top>
+
+	<left>
+		<GridPane>
+			<padding>
+				<Insets top="10" bottom="10" />
+			</padding>
+			
+			<GridPane GridPane.rowIndex="0" GridPane.columnIndex="0" hgap="5" vgap="5">
+				<GridPane.margin>
+					<Insets bottom="10" />
+				</GridPane.margin>
+				<Label text="Pesquisar:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+				<TextField fx:id="txtSearch" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+				<HBox GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER_RIGHT" spacing="10">
+					<Button fx:id="btnSearch" text="Pesquisar" prefWidth="80" onAction="#search" />
+					<Button fx:id="btnClearSearch" text="Limpar" prefWidth="80" onAction="#clearSearch" />
+				</HBox>
+			</GridPane>
+			
+			<TableView fx:id="table" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.vgrow="ALWAYS">
+				<columns>
+					<TableColumn text="Site/Serviço"
+						prefWidth="120">
+						<cellValueFactory>
+							<PropertyValueFactory property="servico" />
+						</cellValueFactory>
+					</TableColumn>
+					<TableColumn text="Login"
+						prefWidth="120">
+						<cellValueFactory>
+							<PropertyValueFactory property="login" />
+						</cellValueFactory>
+					</TableColumn>
+				</columns>
+			</TableView>
+			
+			<HBox alignment="CENTER_RIGHT" spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="0">
+				<padding>
+					<Insets top="10" bottom="10" />
+				</padding>
+				<Button fx:id="btnNovo" text="Novo" prefWidth="60" onAction="#onNew" />
+				<Button fx:id="btnEditar" text="Editar" prefWidth="60" onAction="#onEdit" />
+				<Button fx:id="btnExcluir" text="Excluir" prefWidth="60" onAction="#onDelete" />
+			</HBox>
+		</GridPane>
+	</left>
+
+	<center>
+		<GridPane vgap="5" hgap="5">
+			<BorderPane.margin>
+				<Insets left="10" top="10" right="10" />
+			</BorderPane.margin>
+
+			<Label text="Site/Serviço:" GridPane.rowIndex="0"
+				GridPane.columnIndex="0" />
+			<LimitedTextField fx:id="txtServico" GridPane.rowIndex="0" GridPane.columnIndex="1" limit="45" />
+
+			<Label text="Login:" GridPane.rowIndex="1"
+				GridPane.columnIndex="0" />
+			<LimitedTextField fx:id="txtLogin" GridPane.rowIndex="1" GridPane.columnIndex="1" limit="45" GridPane.hgrow="ALWAYS" />
+
+			<Label text="Senha:" GridPane.rowIndex="2"
+				GridPane.columnIndex="0" />
+			<LimitedTextField fx:id="txtSenha" GridPane.rowIndex="2" GridPane.columnIndex="1" limit="15" GridPane.hgrow="ALWAYS" />
+
+			<Label text="Observações:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+			
+			<TextArea fx:id="txtObservacoes" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+				
+			<HBox GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2" spacing="10" alignment="CENTER_RIGHT">
+				<Button fx:id="btnConfirm" text="Confirmar" onAction="#onConfirm" />
+				<Button fx:id="btnCancel" text="Cancelar" onAction="#onCancel" />
+			</HBox>
+		</GridPane>
+	</center>
+</BorderPane>
+

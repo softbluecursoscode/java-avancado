@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usuarios xmlns="http://www.softblue.com.br/java/xml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.softblue.com.br/java/xml usuarios.xsd">
+	
+	<usuario id="1">
+		<nome>José da Silva</nome>
+		<idade>20</idade>
+		<email>abc@xyz.com</email>
+	</usuario>
+	
+	<usuario id="2">
+		<nome>Maria da Silva</nome>
+		<idade>20</idade>
+		<email>def@xyz.com</email>
+	</usuario>
+</usuarios>

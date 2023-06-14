@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.softblue.java.javafx.Controller">
+	<Slider fx:id="slider" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" />
+	
+	<TextField fx:id="text" prefWidth="60" AnchorPane.topAnchor="40" AnchorPane.leftAnchor="20"   />
+	
+	<Label  fx:id="label" text="?" prefWidth="60" AnchorPane.topAnchor="40" AnchorPane.leftAnchor="100"   />
+	
+	<CheckBox fx:id="checkbox" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="20" />
+</AnchorPane>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ChoiceBox?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.softblue.javaavancado.exercicio.CurrencyViewer"
+	vgap="10" hgap="10">
+	<padding>
+		<Insets top="10" bottom="10" left="10" right="10" />
+	</padding>
+
+	<Label text="Valor:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+	<TextField fx:id="txtValor" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+	
+	<Label text="Locale:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+	<ChoiceBox fx:id="choLocale" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+	
+	<Label text="Resultado:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+	<Text fx:id="txtResultado" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-font-size: 16px; -fx-font-weight: bold" />
+</GridPane>
+

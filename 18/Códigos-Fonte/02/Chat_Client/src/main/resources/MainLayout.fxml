@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.softblue.java.chat.client.ui.controller.MainController">
+	<top>
+		<MenuBar>
+			<Menu text="_Arquivo">
+				<MenuItem text="_Preferências..." onAction="#openPreferencesWindow" />
+				<SeparatorMenuItem />
+				<MenuItem text="_Sair" onAction="#exit" />
+			</Menu>
+		</MenuBar>
+	</top>
+	
+	<center>
+		<GridPane>
+			<HBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="7">
+				<padding>
+					<Insets top="10" bottom="10" left="3" right="3" />
+				</padding>
+				<Label text="Nome:" />
+				<TextField fx:id="txtNome" onAction="#connect" />
+				<Button fx:id="btnConnect" text="Conectar" onAction="#connect" />
+				<Button fx:id="btnDisconnect" text="Desconectar" onAction="#disconnect" />
+			</HBox>
+			
+			<TextArea fx:id="txtMessages" editable="false" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS" />
+			
+			<HBox GridPane.columnIndex="0" GridPane.rowIndex="2" spacing="7">
+				<padding>
+					<Insets top="10" bottom="10" left="3" right="3" />
+				</padding>
+				<Label text="Mensagem:" />
+				<TextField fx:id="txtMessage" HBox.hgrow="ALWAYS" onAction="#sendMessage" />
+				<Button fx:id="btnSend" text="Enviar" onAction="#sendMessage" />
+			</HBox>
+		</GridPane>
+	</center>
+</BorderPane>
+

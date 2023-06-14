@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.softblue.com.br/java/xml"
+	xmlns="http://www.softblue.com.br/java/xml">
+	
+	<xsd:element name="nome">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1" />
+				<xsd:maxLength value="30" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	
+	<xsd:element name="idade" type="xsd:integer" />
+	<xsd:element name="email" type="xsd:string" />
+	
+	<xsd:element name="usuario">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nome" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="idade" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="email" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute type="xsd:string" name="id" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="usuarios">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="usuario" minOccurs="1" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,15 @@
+.button {
+	-fx-font: 18px "Courier New"
+}
+
+.text-field {
+	-fx-background-color: blue;
+}
+
+.alert {
+	-fx-background-color: red;
+}
+
+#cb {
+	-fx-font-weight: bold;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.softblue.java.javafx.Controller">
+	<padding>
+		<Insets top="5" bottom="5" left="5" right="5" />
+	</padding>
+	<center>
+		<VBox alignment="CENTER" spacing="20.0">
+			<padding>
+				<Insets top="20" />
+			</padding>
+			<HBox alignment="CENTER" spacing="10.0">
+				<Button fx:id="btnIniciar" text="Iniciar" prefWidth="100"
+					onAction="#start" />
+				<Button fx:id="btnCancelar" text="Cancelar" prefWidth="100"
+					onAction="#cancel" />
+			</HBox>
+
+			<ProgressBar fx:id="progress" prefWidth="200" />
+
+			<Label fx:id="lblPercent" />
+		</VBox>
+	</center>
+	
+	<bottom>
+		<Text fx:id="txtStatusBar" />
+	</bottom>
+</BorderPane>
